@@ -1,7 +1,8 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Menu {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         while (true) {
             System.out.println("Выберите действие введя его номер");
             System.out.println("1. Зашифровать текст в файле с помощью ключа");
@@ -13,7 +14,7 @@ public class Menu {
             String answer = console.nextLine();
 
             switch (answer) {
-                case ("1") -> System.out.println("action1");
+                case ("1") -> Encrypted.encrypted();
                 case ("2") -> System.out.println("action2");
                 case ("3") -> System.out.println("action3");
                 case ("4") -> System.out.println("action4");
