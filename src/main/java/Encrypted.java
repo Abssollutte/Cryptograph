@@ -14,7 +14,8 @@ public class Encrypted {
         try (BufferedReader reader = new BufferedReader(new FileReader(src));
              BufferedWriter writer = new BufferedWriter(new FileWriter(dst));) {
             while (reader.ready()) {
-                String string = reader.readLine();
+                CaesarCipher caesarCipher = new CaesarCipher();
+                String string = caesarCipher.encrypt(reader.readLine(), key);
                 writer.write(string);
                 writer.newLine();
 

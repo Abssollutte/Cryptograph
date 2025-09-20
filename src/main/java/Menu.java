@@ -14,8 +14,8 @@ public class Menu {
             String answer = console.nextLine();
 
             switch (answer) {
-                case ("1") -> Encrypted.encrypted();
-                case ("2") -> System.out.println("action2");
+                case ("1") -> EncryptDecrypt.crypt(true);
+                case ("2") -> EncryptDecrypt.crypt(false);
                 case ("3") -> System.out.println("action3");
                 case ("4") -> System.out.println("action4");
                 case ("5") -> {return;}
