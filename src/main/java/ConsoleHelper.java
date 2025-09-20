@@ -3,6 +3,7 @@ import lombok.experimental.UtilityClass;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.nio.file.Path;
 
 @UtilityClass
 public class ConsoleHelper {
@@ -16,5 +17,9 @@ public class ConsoleHelper {
 
     public int readInt() {
         return Integer.parseInt(readString());
+    }
+
+    public Path buildFileName(String path, String suffix) {
+        return null;
     }
 }
