@@ -11,11 +11,13 @@ public class Encrypted {
         int key = Integer.parseInt(console.nextLine());
         System.out.println("Введите адрес куда записать результат");
         String dst = console.nextLine();
+        CaesarCipher caesarCipher = new CaesarCipher();
         try (BufferedReader reader = new BufferedReader(new FileReader(src));
              BufferedWriter writer = new BufferedWriter(new FileWriter(dst));) {
             while (reader.ready()) {
                 String string = reader.readLine();
-                writer.write(string);
+                String encrypt = caesarCipher.encrypt(string, key);
+                writer.write(encrypt);
                 writer.newLine();
 
             }
