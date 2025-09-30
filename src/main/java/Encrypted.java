@@ -2,7 +2,6 @@ import java.io.*;
 import java.util.Scanner;
 
 public class Encrypted {
-
     public static void encrypted() throws IOException {
         System.out.println("Введите путь к файлу для его зашифровки");
         Scanner console = new Scanner(System.in);
