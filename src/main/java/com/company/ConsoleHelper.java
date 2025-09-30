@@ -1,3 +1,5 @@
+package com.company;
+
 import lombok.SneakyThrows;
 import lombok.experimental.UtilityClass;
 
@@ -9,6 +11,9 @@ import java.nio.file.Path;
 public class ConsoleHelper {
     private final BufferedReader console = new BufferedReader(new InputStreamReader(System.in));
 
+    public void writeMessage(String message) {
+        System.out.println(message);
+    }
 
     @SneakyThrows
     public String readString() {
@@ -33,4 +38,5 @@ public class ConsoleHelper {
         }
         return parent.resolve(newFileName);
     }
+
 }

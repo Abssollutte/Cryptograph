@@ -1,3 +1,5 @@
+package com.company;
+
 public class CaesarCipher {
 
     private static final String alphabet = "abcdefghijklmnopqrstuvwxyz" + "ABCDEFGHIJKLMNOPQRSTUVWXYZ" +
@@ -24,8 +26,13 @@ public class CaesarCipher {
         }
         return builder.toString();
     }
+
     public String decrypt(String message, int key) {
         return encrypt(message, key * -1);
+    }
+
+    public int alphabetLength() {
+        return alphabet.length();
     }
 
 
