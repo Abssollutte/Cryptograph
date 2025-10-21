@@ -11,10 +11,9 @@ public class EncryptDecrypt {
     @SneakyThrows
     public static void encrypt(boolean flag) {
         System.out.println("Введите путь к файлу для его " + (flag ? "шифровки" : "расшифровки"));
-        Scanner console = new Scanner(System.in);
-        String src = console.nextLine();
+        String src = ConsoleHelper.readString();
         System.out.println("Введите ключ");
-        int key = Integer.parseInt(console.nextLine());
+        int key = ConsoleHelper.readInt();
         Path dst = ConsoleHelper.buildFileName(src, (flag ? "_encrypt" : "_decrypt"));
         CaesarCipher caesar = new CaesarCipher();
         try (BufferedReader reader = new BufferedReader(new FileReader(src));
