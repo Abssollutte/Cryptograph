@@ -34,6 +34,4 @@ public class CaesarCipher {
     public int alphabetLength() {
         return alphabet.length();
     }
-
-
 }
